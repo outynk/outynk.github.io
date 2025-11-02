@@ -6,15 +6,15 @@
   
   <title>Write Up | CTF</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="一、攻防世界 1、view_source 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u 2、robots 本题考查robots协议：在区域名后加&#x2F;robots.txt ，后根据所给信息访问&#x2F;f1ag_1s_h3re.php文件即可 3、backup 本题考查备份文件，其主要后缀有：“.git” 、“.sv">
+  <meta name="description" content="一、攻防世界1、view_source 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u 2、robots 本题考查robots协议：在区域名后加&#x2F;robots.txt ，后根据所给信息访问&#x2F;f1ag_1s_h3re.php文件即可 3、backup 本题考查备份文件，其主要后缀有：“.git” 、“.svn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Write Up">
 <meta property="og:url" content="http://outynk.github.io/2025/10/30/Write-Up/index.html">
 <meta property="og:site_name" content="CTF">
-<meta property="og:description" content="一、攻防世界 1、view_source 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u 2、robots 本题考查robots协议：在区域名后加&#x2F;robots.txt ，后根据所给信息访问&#x2F;f1ag_1s_h3re.php文件即可 3、backup 本题考查备份文件，其主要后缀有：“.git” 、“.sv">
+<meta property="og:description" content="一、攻防世界1、view_source 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u 2、robots 本题考查robots协议：在区域名后加&#x2F;robots.txt ，后根据所给信息访问&#x2F;f1ag_1s_h3re.php文件即可 3、backup 本题考查备份文件，其主要后缀有：“.git” 、“.svn">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-10-30T15:24:51.000Z">
-<meta property="article:modified_time" content="2025-11-02T01:32:37.925Z">
+<meta property="article:modified_time" content="2025-11-02T02:08:27.660Z">
 <meta property="article:author" content="outynk">
 <meta name="twitter:card" content="summary">
   
@@ -95,8 +95,15 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>一、攻防世界<br> 1、view_source<br> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u<br> 2、robots<br> 本题考查robots协议：在区域名后加&#x2F;robots.txt ，后根据所给信息访问&#x2F;f1ag_1s_h3re.php文件即可<br> 3、backup<br> 本题考查备份文件，其主要后缀有：“.git” 、“.svn”、“ .swp” “.~”、“.bak”、“.bash_history”、“.bkf”。可以个个尝试。<br> 本题还可以使用dirsearch扫盘，python dirsearch.py -u 域名 -e*，可对网站进行扫描，可扫出&#x2F;index.php.bak<br> 4、cookie<br> 本题考查Cookie的位置：检查-&gt;应用-&gt;储存-&gt;cookie,能找到\cookie.php文件，访问后查看标头相应<br> 5、disabled_button<br> 本题考查disabled的移除<br> 6、get_post<br> 二、Bugku<br> 1、滑稽<br> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u<br> 2、计算器<br> 三、BUUCTF<br> 1、[极客大挑战 2019]EasySQL<br> 本题考查SQL注入，对BurpSuite的使用，首先输入万能账号admin，随便输入密码，使用代理对网站进行抓包，发送到Intruder导入字典进行爆破，找到长度异常的请求，查看响应<br> 2、[极客大挑战 2019]Havefun<br> 本题考查对php代码的理解，找控制猫身体的那段，代码显示如果cat&#x3D;dog就输出flag，使用HackBar在URL添加&#x2F;?cat&#x3D;dog,并发送<br> 3、</p>
-
+        <h1 id="一、攻防世界"><a href="#一、攻防世界" class="headerlink" title="一、攻防世界"></a><strong>一、攻防世界</strong></h1><h2 id="1、view-source"><a href="#1、view-source" class="headerlink" title="1、view_source"></a><strong>1、view_source</strong></h2><p> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u</p>
+<h2 id="2、robots"><a href="#2、robots" class="headerlink" title="2、robots"></a><strong>2、robots</strong></h2><p> 本题考查robots协议：在区域名后加&#x2F;robots.txt ，后根据所给信息访问&#x2F;f1ag_1s_h3re.php文件即可</p>
+<h2 id="3、backup"><a href="#3、backup" class="headerlink" title="3、backup"></a><strong>3、backup</strong></h2><p> 本题考查备份文件，其主要后缀有：“.git” 、“.svn”、“ .swp” “.~”、“.bak”、“.bash_history”、“.bkf”。可以个个尝试。<br> 本题还可以使用dirsearch扫盘，python dirsearch.py -u 域名 -e*，可对网站进行扫描，可扫出&#x2F;index.php.bak</p>
+<h2 id="4、cookie"><a href="#4、cookie" class="headerlink" title="4、cookie"></a><strong>4、cookie</strong></h2><p> 本题考查Cookie的位置：检查-&gt;应用-&gt;储存-&gt;cookie,能找到\cookie.php文件，访问后查看标头相应</p>
+<h2 id="5、disabled-button"><a href="#5、disabled-button" class="headerlink" title="5、disabled_button"></a><strong>5、disabled_button</strong></h2><p> 本题考查disabled的移除</p>
+<h2 id="6、get-post"><a href="#6、get-post" class="headerlink" title="6、get_post"></a><strong>6、get_post</strong></h2><h1 id="二、Bugku"><a href="#二、Bugku" class="headerlink" title="二、Bugku"></a><strong>二、Bugku</strong></h1><h2 id="1、滑稽"><a href="#1、滑稽" class="headerlink" title="1、滑稽"></a><strong>1、滑稽</strong></h2><p> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u</p>
+<h2 id="2、计算器"><a href="#2、计算器" class="headerlink" title="2、计算器"></a><strong>2、计算器</strong></h2><h1 id="三、BUUCTF"><a href="#三、BUUCTF" class="headerlink" title="三、BUUCTF"></a><strong>三、BUUCTF</strong></h1><h2 id="1、-极客大挑战-2019-EasySQL"><a href="#1、-极客大挑战-2019-EasySQL" class="headerlink" title="1、[极客大挑战 2019]EasySQL"></a><strong>1、[极客大挑战 2019]EasySQL</strong></h2><p> 本题考查SQL注入，对BurpSuite的使用，首先输入万能账号admin，随便输入密码，使用代理对网站进行抓包，发送到Intruder导入字典进行爆破，找到长度异常的请求，查看响应</p>
+<h2 id="2、-极客大挑战-2019-Havefun"><a href="#2、-极客大挑战-2019-Havefun" class="headerlink" title="2、[极客大挑战 2019]Havefun"></a><strong>2、[极客大挑战 2019]Havefun</strong></h2><p> 本题考查对php代码的理解，找控制猫身体的那段，代码显示如果cat&#x3D;dog就输出flag，使用HackBar在URL添加&#x2F;?cat&#x3D;dog,并发送</p>
+<h2 id="3、"><a href="#3、" class="headerlink" title="**3、"></a>**3、</h2>
       
     </div>
     <footer class="article-footer">
