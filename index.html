@@ -71,6 +71,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Write-Up" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/10/30/Write-Up/" class="article-date">
+  <time class="dt-published" datetime="2025-10-30T15:24:51.000Z" itemprop="datePublished">2025-10-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/10/30/Write-Up/">Write Up</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>一、攻防世界<br> 1、view_source<br> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u<br> 2、robots<br> 本题考查robots协议：在区域名后加&#x2F;robots.txt ，后根据所给信息访问&#x2F;f1ag_1s_h3re.php文件即可<br> 3、backup<br> 本题考查备份文件，其主要后缀有：“.git” 、“.svn”、“ .swp” “.~”、“.bak”、“.bash_history”、“.bkf”。可以个个尝试。<br> 本题还可以使用dirsearch扫盘，python dirsearch.py -u 域名 -e*，可对网站进行扫描，可扫出&#x2F;index.php.bak<br> 4、cookie<br> 本题考查Cookie的位置：检查-&gt;应用-&gt;储存-&gt;cookie,能找到\cookie.php文件，访问后查看标头相应<br> 5、disabled_button<br> 本题考查disabled的移除<br> 6、get_post<br> 二、Bugku<br> 1、滑稽<br> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u<br> 2、计算器<br> 三、BUUCTF<br> 1、[极客大挑战 2019]EasySQL<br> 本题考查SQL注入，对BurpSuite的使用，首先输入万能账号admin，随便输入密码，使用代理对网站进行抓包，发送到Intruder导入字典进行爆破，找到长度异常的请求，查看响应<br> 2、[极客大挑战 2019]Havefun<br> 本题考查对php代码的理解，找控制猫身体的那段，代码显示如果cat&#x3D;dog就输出flag，使用HackBar在URL添加&#x2F;?cat&#x3D;dog,并发送<br> 3、</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://outynk.github.io/2025/10/30/Write-Up/" data-id="cuidH-TDBQuJ9fSmDBgivaUp7" data-title="Write Up" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-CTF" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/10/29/CTF/" class="article-date">
@@ -200,6 +239,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2025/10/30/Write-Up/">Write Up</a>
+          </li>
         
           <li>
             <a href="/2025/10/29/CTF/">CTF</a>
