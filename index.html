@@ -95,13 +95,18 @@
       
         <h1 id="一、攻防世界"><a href="#一、攻防世界" class="headerlink" title="一、攻防世界"></a><strong>一、攻防世界</strong></h1><h2 id="1、view-source"><a href="#1、view-source" class="headerlink" title="1、view_source"></a><strong>1、view_source</strong></h2><p> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u</p>
 <h2 id="2、robots"><a href="#2、robots" class="headerlink" title="2、robots"></a><strong>2、robots</strong></h2><p> 本题考查robots协议：在区域名后加&#x2F;robots.txt ，后根据所给信息访问&#x2F;f1ag_1s_h3re.php文件即可</p>
-<h2 id="3、backup"><a href="#3、backup" class="headerlink" title="3、backup"></a><strong>3、backup</strong></h2><p> 本题考查备份文件，其主要后缀有：“.git” 、“.svn”、“ .swp” “.~”、“.bak”、“.bash_history”、“.bkf”。可以个个尝试。<br> 本题还可以使用dirsearch扫盘，python dirsearch.py -u 域名 -e*，可对网站进行扫描，可扫出&#x2F;index.php.bak</p>
+<h2 id="3、backup"><a href="#3、backup" class="headerlink" title="3、backup"></a><strong>3、backup</strong></h2><p> 本题考查备份文件，其主要后缀有：“.git” 、“.svn”、“ .swp” “.~”、“.bak”、“.bash_history”、“.bkf”。可以一个个尝试。<br> 本题还可以使用dirsearch扫盘，python dirsearch.py -u 域名 -e*，可对网站进行扫描，可扫出&#x2F;index.php.bak</p>
 <h2 id="4、cookie"><a href="#4、cookie" class="headerlink" title="4、cookie"></a><strong>4、cookie</strong></h2><p> 本题考查Cookie的位置：检查-&gt;应用-&gt;储存-&gt;cookie,能找到\cookie.php文件，访问后查看标头相应</p>
 <h2 id="5、disabled-button"><a href="#5、disabled-button" class="headerlink" title="5、disabled_button"></a><strong>5、disabled_button</strong></h2><p> 本题考查disabled的移除</p>
-<h2 id="6、get-post"><a href="#6、get-post" class="headerlink" title="6、get_post"></a><strong>6、get_post</strong></h2><h1 id="二、Bugku"><a href="#二、Bugku" class="headerlink" title="二、Bugku"></a><strong>二、Bugku</strong></h1><h2 id="1、滑稽"><a href="#1、滑稽" class="headerlink" title="1、滑稽"></a><strong>1、滑稽</strong></h2><p> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u</p>
+<h2 id="6、get-post"><a href="#6、get-post" class="headerlink" title="6、get_post"></a><strong>6、get_post</strong></h2><p> 本题考查变量提交方式，与HackBar的使用方法，首先提交GET类型变量，URL处填写&#x2F;？a&#x3D;1;再提交一个POST型变量，在POST处填写b&#x3D;2</p>
+<h2 id="7、weak-auth"><a href="#7、weak-auth" class="headerlink" title="7、weak_auth"></a><strong>7、weak_auth</strong></h2><p> 本题考查SQL注入，对BurpSuite的使用，首先输入万能账号admin，随便输入密码，使用代理对网站进行抓包，发送到Intruder导入字典进行爆破，找到长度异常的请求，查看响应</p>
+<h2 id="8、simple-php"><a href="#8、simple-php" class="headerlink" title="8、simple_php"></a><strong>8、simple_php</strong></h2><p> 本题考查对PHP代码的理解解读（弱比较），和对变量的赋值，</p>
+<h2 id="9、"><a href="#9、" class="headerlink" title="**9、"></a>**9、</h2><h1 id="二、Bugku"><a href="#二、Bugku" class="headerlink" title="二、Bugku"></a><strong>二、Bugku</strong></h1><h2 id="1、滑稽"><a href="#1、滑稽" class="headerlink" title="1、滑稽"></a><strong>1、滑稽</strong></h2><p> 本题考查查看源代码的方式：右键、F12、在域名前加view-source、抓包、访问index.phps、crtl+u</p>
 <h2 id="2、计算器"><a href="#2、计算器" class="headerlink" title="2、计算器"></a><strong>2、计算器</strong></h2><h1 id="三、BUUCTF"><a href="#三、BUUCTF" class="headerlink" title="三、BUUCTF"></a><strong>三、BUUCTF</strong></h1><h2 id="1、-极客大挑战-2019-EasySQL"><a href="#1、-极客大挑战-2019-EasySQL" class="headerlink" title="1、[极客大挑战 2019]EasySQL"></a><strong>1、[极客大挑战 2019]EasySQL</strong></h2><p> 本题考查SQL注入，对BurpSuite的使用，首先输入万能账号admin，随便输入密码，使用代理对网站进行抓包，发送到Intruder导入字典进行爆破，找到长度异常的请求，查看响应</p>
 <h2 id="2、-极客大挑战-2019-Havefun"><a href="#2、-极客大挑战-2019-Havefun" class="headerlink" title="2、[极客大挑战 2019]Havefun"></a><strong>2、[极客大挑战 2019]Havefun</strong></h2><p> 本题考查对php代码的理解，找控制猫身体的那段，代码显示如果cat&#x3D;dog就输出flag，使用HackBar在URL添加&#x2F;?cat&#x3D;dog,并发送</p>
-<h2 id="3、"><a href="#3、" class="headerlink" title="**3、"></a>**3、</h2>
+<h2 id="3、-极客大挑战-2019-Secret-File"><a href="#3、-极客大挑战-2019-Secret-File" class="headerlink" title="3、[极客大挑战 2019]Secret File"></a><strong>3、[极客大挑战 2019]Secret File</strong></h2><p> 本题考查对BurpSuite的使用，与PHP伪协议绕过base64，对网站进行抓包，不断使用Repeater对文件进行访问，访问到secr3t.php后输入变量file使用PHP绕过，最基础PHP绕过的base64的编码转换：<br> php:&#x2F;&#x2F;filter&#x2F;convert.base64-encode&#x2F;resource&#x3D;文件名，最后使用base64解码</p>
+<h2 id="4、-极客大挑战-2019-Knife"><a href="#4、-极客大挑战-2019-Knife" class="headerlink" title="4、[极客大挑战 2019]Knife"></a><strong>4、[极客大挑战 2019]Knife</strong></h2><p> 本题考查对蚁剑的使用，在蚁剑中填入对应的网站和密码，连接成功后寻找flag文件</p>
+<h2 id="5、"><a href="#5、" class="headerlink" title="**5、"></a>**5、</h2>
       
     </div>
     <footer class="article-footer">
